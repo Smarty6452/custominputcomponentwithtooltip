@@ -1,0 +1,87 @@
+.material-textfield {
+  position: relative;
+  margin: 5rem 0;
+}
+
+.material-textfield input.custom-input {
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1rem 2.7rem 1rem 1rem;
+  color: gray;
+  transition: border-color 0.2s ease-out;
+  width: 100%;
+}
+
+.material-textfield input.custom-input:focus {
+  border-color: #2e2d2f;
+  border-width: 2px;
+}
+
+.material-textfield input.custom-input.exceed-limit {
+  border-color: rgb(231, 48, 48);
+}
+
+.material-textfield label.custom-label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0.75rem;
+  top: 0.75rem;
+  background-color: white;
+  color: gray;
+  padding: 0 0.3rem;
+  transition: 0.2s ease-out;
+  pointer-events: none;
+}
+
+.material-textfield input.custom-input:focus + label.custom-label,
+.material-textfield
+  input.custom-input:not(:placeholder-shown)
+  + label.custom-label {
+  color: #2e2d2f;
+  top: -0.75rem;
+  left: 0.75rem;
+  transform: scale(0.9);
+}
+
+.material-textfield .char-limit {
+  position: absolute;
+  background-color: white;
+  right: -1.4rem;
+  top: -1rem;
+  font-size: 0.75rem;
+  color: rgb(18, 13, 13);
+  margin-top: 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.material-textfield .char-limit.exceed-limit {
+  color: red;
+}
+
+.material-textfield .add-button {
+  position: absolute;
+  top: -1rem;
+  right: -2.6rem; /* Adjusted right position */
+  background-color: #ffff;
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip {
+  position: absolute;
+  top: -2rem;
+  right: -2.6rem;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
